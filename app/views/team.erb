@@ -1,3 +1,9 @@
+<h1><%= @new_team[:team][:name] %></h1>
 
+<h2>Team Motto: <%= @new_team[:team][:motto] %> </h2>
 
-
+<% @new_team[:team][:members].each_with_index do | member, index | %>
+<h2>Hero Name: <%= @new_team[:team][:members][index][:name] %></h2>
+  <p>Hero Power: <%= @new_team[:team][:members][index][:power] %> </p>
+  <p>Hero Biography: <%= @new_team[:team][:members][index][:bio] %> </p>
+<% end %>
